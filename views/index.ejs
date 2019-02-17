@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+</head>
+<body>
+<h1>++++++WELCOME+++++</h1>
+<h3>Register</h3>
+<% if(messages.registration) { %>
+     <% for (var x of messages.registration) { %>
+      <h3><%= x %></h3>
+     <% } %>
+ <% } %>
+<form action="/register" method="post">
+	<p>Email: <input type="text" name="email"></p>
+	<p>First Name: <input type="text" name="first_name"></p>
+	<p>Last Name: <input type="text" name="last_name"></p>
+	<p>Password: <input type="text" name="password"></p>
+	<p>Confirm Password: <input type="text" name="c_password"></p>
+	<p>Birthday: <input type="date" name="birthday"></p>
+	<input type="submit" value="REGISTER">
+</form>
+<hr>
+<h3>Login</h3>
+<form action="/login" method="post">
+	<p>Email: <input type="text" name="email"></p>
+	<p>Password: <input type="text" name="password"></p>
+	<input type="submit" value="LOGIN">
+</form>
+</body>
+</html>
